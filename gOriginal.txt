@@ -1,10 +1,10 @@
 S=ABC
 A=abX
 X=A
-X=`
+X=#
 B=bY
 Y=BC
-Y=`
+Y=#
 C=cZ
-Z=`
+Z=
 Z=C

@@ -2,7 +2,7 @@ from texttable import Texttable
 from collections import OrderedDict
 
 def isterminal(char):
-    if(char.isupper() or char == "`"):
+    if(char.isupper() or char == "#"):
         return False
     else:
         return True
@@ -18,7 +18,7 @@ def show_dict(dictionary):
     for key in dictionary.keys():
         print(key+"  ➡️  ", end = "")
         for item in dictionary[key]:
-            if(item == "`"):
+            if(item == "#"):
                 print("ε, ", end = "")
             else:
                 print(item+", ", end = "")

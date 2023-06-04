@@ -9,7 +9,7 @@ def rec_follow(k, next_i, grammar_follow, i, grammar, start, grammar_first, lhs)
     else:
         if(k[next_i].isupper()):
             for q in grammar_first[k[next_i]]:
-                if(q=="`"): # If ` is in First(Yk), then Follow(B) = Follow(B) ∪ Follow(A)
+                if(q=="#"): # If # is in First(Yk), then Follow(B) = Follow(B) ∪ Follow(A)
                     grammar_follow = rec_follow(k, next_i+1, grammar_follow, i, grammar, start, grammar_first, lhs)		
                 else:
                     grammar_follow = insert(grammar_follow, lhs, q)

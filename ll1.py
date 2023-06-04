@@ -9,8 +9,8 @@ def generate_parse_table(terminals, non_terminals, grammar, grammar_first, gramm
             if terminal in grammar_first[non_terminal]:
                 rule = get_rule(non_terminal, terminal, grammar, grammar_first)
                 
-            elif("`" in grammar_first[non_terminal] and terminal in grammar_follow[non_terminal]):
-                rule = non_terminal+"=`"
+            elif("#" in grammar_first[non_terminal] and terminal in grammar_follow[non_terminal]):
+                rule = non_terminal+"=#"
                 
             else:
                 rule = ""
@@ -49,7 +49,7 @@ def parse(expr, parse_table, terminals, non_terminals):
                 i = 0
                 is_parsed=False
                 for item in action[2:]:
-                    if(item != "`"):
+                    if(item != "#"):
                         stack.insert(i,item)
                     i+=1
 
