@@ -1,8 +1,8 @@
 E=TL
 L=+TL
-L=`
+L=#
 T=FK
 K=*FK
-K=`
+K=#
 F=i
 F=(E)
